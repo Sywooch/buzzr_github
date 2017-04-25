@@ -38,6 +38,7 @@ $url = Url::toRoute(['store/main', 'code'=>$model->slug]);
 		<? $cats = $model->getStoreCategories(1); ?>
 		<? if(!empty($cats)) : ?>
 		<div class="categories">
+			<span class="stores_category">Категории товаров: </span>
 			<? foreach($cats as $cat) : ?>
 				<span class="category-item">
 				<a data-pjax="0" href="<?=Url::toRoute(['store/catalogproducts', 'code'=>$model->slug, 'parent'=>$cat['id']]);?>">
